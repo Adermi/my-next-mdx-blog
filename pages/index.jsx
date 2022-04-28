@@ -17,8 +17,7 @@ export default function App() {
   return (
     <div>
       <Title>Hello World!</Title>
-      <TitleRed>Hello World!</TitleRed>
-      <TitleRed>Hello World!</TitleRed>
+      <TitleRed>Hello World!</TitleRed>z
       <Button>666</Button>
     </div>
   );
