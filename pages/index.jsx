@@ -18,6 +18,7 @@ export default function App() {
     <div>
       <Title>Hello World!</Title>
       <TitleRed>Hello World!</TitleRed>
+      <TitleRed>Hello World!</TitleRed>
       <Button>666</Button>
     </div>
   );
