@@ -1,6 +1,22 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+module.exports = {
+  pageExtensions: ['jsx', 'js', 'ts', 'tsx', 'mdx', 'md'],
+  webpack: (config, {
+    dev,
+    isServer,
+    ...options
+  }) => {
 
-module.exports = nextConfig
+    config.module.rules.push({
+      test: /.mdx?$/,
+      use: [
+        options.defaultLoaders.babel,
+        {
+          loader: '@mdx-js/loader',
+          options: {}
+        }
+      ],
+    });
+
+    return config;
+  },
+};

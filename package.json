@@ -11,11 +11,16 @@
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
+    "@fontsource/roboto": "^4.5.5",
+    "@mdx-js/loader": "^2.1.1",
+    "@mui/icons-material": "^5.6.2",
     "@mui/material": "^5.6.3",
+    "immer": "^9.0.12",
     "next": "12.1.5",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "use-immer": "^0.7.0"
   },
   "devDependencies": {
     "eslint": "8.14.0",
