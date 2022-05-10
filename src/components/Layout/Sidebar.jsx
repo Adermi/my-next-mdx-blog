@@ -1,10 +1,9 @@
-import { Avatar, Divider, Drawer, Typography } from "@mui/material";
+import { Avatar, Divider, Drawer, Typography, Paper } from "@mui/material";
 import DraftsIcon from "@mui/icons-material/Drafts";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import HomeIcon from "@mui/icons-material/Home";
 import { Box } from "@mui/system";
 import SideItem from "./SideItem";
-import { Theme } from "@mui/material/styles";
 
 const sideData = [
   {
@@ -27,11 +26,9 @@ const sideData = [
 const content = (
   <Box sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
     <Box sx={{ display: "flex", mt: 2, p: 2 }}>
-      <Avatar>A</Avatar>
-      <Typography
-        variant="h6"
-        sx={{ lineHeight: "40px", ml: 1 }}
-      >
+      <Avatar src="/user.jpg" variant="rounded"></Avatar>
+
+      <Typography variant="h6" sx={{ lineHeight: "40px", ml: 1, color: "primary.main" }}>
         Andermi
       </Typography>
     </Box>
@@ -66,13 +63,14 @@ export default function Sidebar({ isOpen, onSidebarClose }) {
       onClose={onSidebarClose}
       PaperProps={{
         sx: {
-          width: 280,
+          width: 200,
           transition: "none",
         },
       }}
       sx={{ zIndex: (theme) => theme.zIndex.appBar + 100 }}
     >
-      {content}
+      
+      <Paper sx={{ height: "100%", backgroundImage: 'none' }} >{content}</Paper>
     </Drawer>
   );
 }

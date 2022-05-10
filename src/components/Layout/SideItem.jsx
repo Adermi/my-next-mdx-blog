@@ -15,20 +15,19 @@ export default function SideItem({ title, href, icon }) {
           startIcon={icon}
           component="a"
           sx={{
-            backgroundColor: active && "gold",
+            backgroundColor: active
+              ? "sideList.activeBgColor"
+              : "sideList.bgColor",
             borderRadius: 1,
-            color: active ? "secondary.default" : "neutral.300",
+            color: active ? "sideList.activeText" : "sideList.text",
             fontWeight: active && "fontWeightBold",
             justifyContent: "flex-start",
             px: 3,
             textAlign: "left",
             textTransform: "none",
             width: "100%",
-            "& .MuiButton-startIcon": {
-              color: active ? "secondary.main" : "neutral.400",
-            },
             "&:hover": {
-              backgroundColor: "gold",
+              backgroundColor: active ? 'sideList.activeBgColor' :"sideList.hoverBgColor"  ,
             },
           }}
         >
